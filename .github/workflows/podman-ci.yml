@@ -19,5 +19,5 @@ jobs:
 
       - name: Build & Push Image
         run: |
-          podman build -t docker.io/pradeepkuduukil/podman-app:latest .
-          podman push docker.io/pradeepkuduukil/podman-app:latest
+          podman build -t docker.io/${{ secrets.DOCKER_USERNAME }}/podman-app:latest .
+          podman push docker.io/${{ secrets.DOCKER_USERNAME }}/podman-app:latest
